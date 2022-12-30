@@ -3,15 +3,12 @@ TechGenei-Travel-agency
 2. Setup CI/CD using Codepipeline for the application deployment.
 
 
-Launch EC2 instance and install docker 
+1.	Launch EC2 instance and install docker 
 
 
 Create folder src and take pull  from github
 
 Create Database in RDS and import tagency.sql file in database
-
-
-
 
 
 Dockerfile 
@@ -27,9 +24,7 @@ RUN chown -R www-data:www-data /var/www
 CMD ["start-apache"]
 
 
-
-
-Create ECR Repo 
+2.	Create ECR Repo 
 
 Push commands 
 
@@ -46,74 +41,33 @@ docker push 982895218397.dkr.ecr.ap-south-1.amazonaws.com/dockerrepo:latest
 
 This commands push docker images into ECR
 
-Create Task Defination
+3.	Create Task Defination
 
 
+4.	Create Cluster and Service and Application LoadBalancer
 
 
-
-Create Cluster and Service and Application LoadBalancer
-
-
-
-
-
-
-
-Now, CICD through CodeCommit (Git) + Code Build + Code Deploy + Code Pipeline 
+5.	Now, CICD through CodeCommit (Git) + Code Build + Code Deploy + Code Pipeline 
 
 Create CodeCommit Repo and Add Below Files 
-
-
-
-
-
-
+ 
 Create CodeBuld
-
-
-
-
 
 Create CodeDeploy
 
-
-
-
-
-
-
 Create CodePipeline
 
+ 6.	Go to ECS Task will be up 
+
+7.	Go to LoadBalancer and add Path base routing 
+
+ ALB URL:
+http://lb2-1042812927.ap-south-1.elb.amazonaws.com/travel-agency/
 
 
 
+ 
 
 
 
-
-
-
-
-
-
-
-
-Go to ECS Task will be up 
-
-
-
-
-
-Go to LoadBalancer and add Path base routing 
-
-
-
-
-
-
-
-
-
-
-
+ 
