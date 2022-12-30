@@ -1,0 +1,6 @@
+[
+    {
+        "name": "web1",
+        "imageUri": "982895218397.dkr.ecr.ap-south-1.amazonaws.com/dockerrepo:latest"
+    }
+]
